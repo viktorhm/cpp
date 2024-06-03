@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/01 08:37:17 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/06/01 08:45:24 by vharatyk         ###   ########.fr       */
+/*   Created: 2024/06/01 08:37:25 by vharatyk          #+#    #+#             */
+/*   Updated: 2024/06/01 10:51:57 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<iostream>
+#include <iostream>
+#include "phonebook.hpp"
 
-int main (int argc , char *argv[])
+
+int main(void)
 {
-	int i = 0;
-	int j = 1;
+	Phonebook	pb;
+	std::string	str;
 
-	if(argc < 2)
-		std::cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	while(argv[j])
+	while(str != "EXIT")
 	{
-		i=0;
-		while(argv[j][i])
+		std::cout << "enter a command";
+		std::getline(std::cin , str);
+		if(str == "ADD")
+			pb.add();
+		else if(str == "SEARCH")
+			pb.seach();
+		if(std::cin.eof())
 		{
-			std::cout<<(char)std::toupper(argv[j][i]);
-			i++;
+			std::cout<<std::endl;
+			return(0);
 		}
-		j++;
 	}
-	std::cout<<std::endl;
 	return(0);
 }
+

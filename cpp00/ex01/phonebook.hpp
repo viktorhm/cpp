@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/01 08:37:17 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/06/01 08:45:24 by vharatyk         ###   ########.fr       */
+/*   Created: 2024/06/01 09:07:58 by vharatyk          #+#    #+#             */
+/*   Updated: 2024/06/03 12:35:18 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<iostream>
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-int main (int argc , char *argv[])
+#include "contact.hpp"
+#include "utils.hpp"
+
+
+class Phonebook
 {
-	int i = 0;
-	int j = 1;
+private:
+	Contact contacts[8];
+	int		index;
+public:
+	Phonebook(void);
+	~Phonebook(void);
+	void	add(void);
+	void	search(void);
+	void	print(Contact contats);
 
-	if(argc < 2)
-		std::cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	while(argv[j])
-	{
-		i=0;
-		while(argv[j][i])
-		{
-			std::cout<<(char)std::toupper(argv[j][i]);
-			i++;
-		}
-		j++;
-	}
-	std::cout<<std::endl;
-	return(0);
-}
+	contact get_contact(int index);
+};
+
+#endif
