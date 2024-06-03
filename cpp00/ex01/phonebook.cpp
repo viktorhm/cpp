@@ -71,4 +71,16 @@ void	Phonebook::add(void)
 
 
 void	Phonebook::print()
+{
+	if(!contacts.get_name().size())
+	{
+		std::cout << "fail get info";
+	}
+
+	std::cout<<"name"
+	std::cout<<"last name"
+	std::cout<<
+
+
+}
 
