@@ -29,12 +29,4 @@ public:
 	void	set_secret(std::string str);
 };
 
-Contact::Contact(void)
-{
-}
-
-Contact::~Contact(void)
-{
-}
-
 #endif

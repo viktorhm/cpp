@@ -6,14 +6,14 @@
 #    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 09:41:37 by vharatyk          #+#    #+#              #
-#    Updated: 2024/06/06 10:21:34 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/06/06 11:37:01 by vharatyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = phonebook.cpp main.cpp contact.cpp
 
 NAME		= phonebook
-SRCS		= phonebook.cpp main.cpp contact.cpp
+SRCS		= phonebook.cpp main.cpp contact.cpp utils.cpp
 OBJS		= $(SRCS:.cpp=.o)
 CC		= g++
 CPPFLAGS		= -pthread -Wextra -Wall -Werror -std=c++98 -pedantic
