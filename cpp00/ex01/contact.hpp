@@ -25,7 +25,6 @@ public:
 	void	set_name(std::string str);
 	void	set_lastname(std::string str);
 	void	set_speudo(std::string str);
-	void	set_speudo(std::string str);
 	void	set_phone(std::string str);
 	void	set_secret(std::string str);
 };

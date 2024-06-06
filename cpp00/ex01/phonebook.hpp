@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 09:07:58 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/06/03 12:35:18 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/06/06 08:27:28 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 	void	search(void);
 	void	print(Contact contats);
 
-	contact get_contact(int index);
+	Contact get_contact(int index);
 };
 
 #endif

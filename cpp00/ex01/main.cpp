@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/01 08:37:25 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/06/01 10:51:57 by vharatyk         ###   ########.fr       */
+/*   Created: 2024/06/06 10:07:13 by vharatyk          #+#    #+#             */
+/*   Updated: 2024/06/06 10:17:57 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int main(void)
 {
-	Phonebook	pb;
+	Phonebook	phonebook;
 	std::string	str;
 
 	while(str != "EXIT")
@@ -24,9 +24,9 @@ int main(void)
 		std::cout << "enter a command";
 		std::getline(std::cin , str);
 		if(str == "ADD")
-			pb.add();
+			phonebook.add();
 		else if(str == "SEARCH")
-			pb.seach();
+			phonebook.search();
 		if(std::cin.eof())
 		{
 			std::cout<<std::endl;
@@ -35,4 +35,3 @@ int main(void)
 	}
 	return(0);
 }
-

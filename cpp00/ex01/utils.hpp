@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 11:36:25 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/06/03 12:33:54 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/06/06 08:26:38 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <iostream>
 #include"contact.hpp"
 
-std:string	add_spaces(int n);
+std::string	add_spaces(int n);
 std::string	fix_whidth(std::string str , long unsigned max);
 int	search_ui(Contact constats[8]);
 
