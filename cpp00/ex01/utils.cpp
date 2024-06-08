@@ -6,11 +6,33 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 11:11:37 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/06/06 11:36:25 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/06/08 17:22:30 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"utils.hpp"
+
+std::string	add_spaces(int n)
+{
+	std::string str;
+	while(n--)
+	{
+		str.append(" ");
+	}
+	return(str);
+
+
+}
+
+std::string	fix_width(std::string str , long unsigned max)
+{
+	if(str.size() > max)
+		{
+			str.resize(max);
+			str[str.size() - 1] = '.';
+		}
+		return(str);
+}
 
 int search_ui(Contact contacts[8])
 {
