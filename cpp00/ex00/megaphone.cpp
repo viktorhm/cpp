@@ -12,22 +12,18 @@
 
 #include<iostream>
 
-int main (int argc , char *argv[])
+int main (int argc, char *argv[])
 {
-	int i = 0;
-	int j = 1;
+	int i;
+	int j = -1;
 
-	if(argc < 2)
+	if (argc < 2)
 		std::cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	while(argv[j])
+	while (argc > 1 && argv && argv[++j])
 	{
-		i=0;
-		while(argv[j][i])
-		{
+		i = -1;
+		while (j > 0 && argv[j][++i])
 			std::cout<<(char)std::toupper(argv[j][i]);
-			i++;
-		}
-		j++;
 	}
 	std::cout<<std::endl;
 	return(0);

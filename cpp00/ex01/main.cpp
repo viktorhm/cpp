@@ -21,7 +21,7 @@ int main(void)
 
 	while(str != "EXIT")
 	{
-		std::cout << "enter a command";
+		std::cout << "enter a command : ";
 		std::getline(std::cin , str);
 		if(str == "ADD")
 			phonebook.add();

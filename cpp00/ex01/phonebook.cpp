@@ -32,39 +32,39 @@ void	Phonebook::add(void)
 		std::cout << "waring: overwrite" << std::endl;
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<<"Entre name :";
+		std::cout<<"Entre name : ";
 		if(std::getline(std::cin , str) && str != "")
 			this->contacts[this->index % 8 ].set_name(str);
 	}
 	str= "";
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<< this->contacts[this->index % 8].get_name() << "last name";
+		std::cout<< this->contacts[this->index % 8].get_name() <<" last name : ";
 		if(std ::getline(std::cin , str ) && str != "")
 			this->contacts[this->index % 8].set_lastname(str);
 	}
 	str= "";
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<< this->contacts[this->index % 8].get_name() << "speudo";
+		std::cout<< this->contacts[this->index % 8].get_name() <<" speudo : ";
 		if(std ::getline(std::cin , str ) && str != "")
 			this->contacts[this->index % 8].set_speudo(str);
 	}
 	str= "";
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<< this->contacts[this->index % 8].get_name() << "phone";
+		std::cout<< this->contacts[this->index % 8].get_name() << " phone : ";
 		if(std ::getline(std::cin , str ) &&  str != "")
 			this->contacts[this->index % 8].set_phone(str);
 	}
 	str= "";
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<< this->contacts[this->index % 8].get_name() << "secret";
+		std::cout<< this->contacts[this->index % 8].get_name() << " secret : ";
 		if(std ::getline(std::cin , str ) && str != "")
 		{
 			this->contacts[this->index % 8].set_secret(str);
-			std::cout << this->contacts[this->index % 8].get_name() << "profil creted ";
+			std::cout << "profil creted ";
 		}
 	}
 	this->index++;

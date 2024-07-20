@@ -42,23 +42,23 @@ int search_ui(Contact contacts[8])
 
 	c = '0';
 	i = 0;
-	std::cout << "||—————————||————————||—————————————||————————————||";
-	std::cout << "||  Index  ||  Name  ||  Last Name  ||  Nickname  ||";
-	std::cout << "||—————————||————————||—————————————||————————————||";
+	std::cout << "||—————————||————————||—————————————||————————————||\n";
+	std::cout << "||  Index  ||  Name  ||  Last Name  ||  Nickname  ||\n";
+	std::cout << "||—————————||————————||—————————————||————————————||\n";
 	while(++c <= '8')
 	{
 		if(contacts[c - 1 - '0'].get_name().size() && ++i)
 		{
-
+			//?? index ???
 			str = fix_width(str, 10);
-			std::cout << "|" << add_spaces(10 - str.size()) << str;
-			str = fix_width(contacts[c - 1  - '0'].get_name(), 10);
-			std::cout << "|" << add_spaces(10 - str.size()) << str;
-			str = fix_width(contacts[c - 1 - '0'].get_lastname(), 10);
-			std::cout << "|" << add_spaces(10 - str.size()) << str;
-			str = fix_width(contacts[c - 1 - '0'].get_speudo(), 10);
-			std::cout << "|" << add_spaces(10 - str.size()) << str;
-			std::cout << "|" << std::endl;
+			std::cout << "||" << add_spaces(9 - str.size()) << str;
+			str = fix_width(contacts[c - 1  - '0'].get_name(), 9);
+			std::cout << "||" << add_spaces(9 - str.size()) << str;
+			str = fix_width(contacts[c - 1 - '0'].get_lastname(), 9);
+			std::cout << "||" << add_spaces(9 - str.size()) << str;
+			str = fix_width(contacts[c - 1 - '0'].get_speudo(), 9);
+			std::cout << "||" << add_spaces(9 - str.size()) << str;
+			std::cout << "||" << std::endl;
 		}
 	}
 	std::cout << " ------------------------------------------- " << std::endl;
