@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 08:37:17 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/06/01 08:45:24 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:24:44 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int main (int argc, char *argv[])
 			std::cout<<(char)std::toupper(argv[j][i]);
 	}
 	std::cout<<std::endl;
-	return(0);
+	return (0);
 }
