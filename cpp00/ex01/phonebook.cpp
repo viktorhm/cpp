@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 11:18:32 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/06/06 11:10:34 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/07/26 14:11:59 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ return(this->contacts[index % 8]);
 void	Phonebook::search(void)
 {
 	std::string	str;
-	if(!search_ui(this->contacts))
+	if(!display(this->contacts))
 	{
 		std::cout << std::endl << "Phonebook empty" << std::endl;
 		return ;

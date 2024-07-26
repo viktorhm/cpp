@@ -6,11 +6,13 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 11:11:37 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/07/24 13:57:06 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/07/26 14:19:01 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"utils.hpp"
+#include <stdio.h>
+#include <stdlib.h>
 
 std::string	add_spaces(int n)
 {
@@ -34,29 +36,24 @@ std::string	fix_width(std::string str , long unsigned max)
 		return(str);
 }
 
-int search_ui(Contact contacts[8])
+int display(Contact contacts[8])
 {
-	char c;
-	int	i;
+	char c = '0';
+	int	i = 0 ;
 	std::string str;
 
-	c = '0';
-	i = 0;
-	std::cout << "|——————————|————————|—————————————|————————————|\n";
-	std::cout << "|  Index   |  Name  |  Last Name  |  Nickname  |\n";
-	std::cout << "|——————————|————————|—————————————|————————————|\n";
+	std::cout << "|——————————|——————————|——————————|——————————|\n";
+	std::cout << "|  Index   |   Name   |Last Name | Nickname |\n";
+	std::cout << "|——————————|——————————|——————————|——————————|\n";
 	while(++c <= '8')
 	{
-		if(contacts[c - 1 - '0'].get_name().size() && ++i)
+		if(contacts[c - 1- '0'].get_name().size() && ++i)
 		{
-
-			str = fix_width(str, 10);
-
-			std::cout << "|" << add_spaces(10 - str.size()) << str;
-			str = fix_width("0", 10);
+			str = c;
+			str = fix_width(str ,10);
 
 			std::cout << "|" << add_spaces(10 - str.size()) << str;
-			str = fix_width(contacts[c - 1  - '0'].get_name(), 10);
+			str = fix_width(contacts[c - 1 - '0' ].get_name(), 10);
 
 			std::cout << "|" << add_spaces(10 - str.size()) << str;
 			str = fix_width(contacts[c - 1 - '0'].get_lastname(), 10);
