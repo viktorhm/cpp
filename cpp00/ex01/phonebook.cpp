@@ -18,11 +18,13 @@
 Phonebook::Phonebook(void)
 {
 	this->index = 0 ;
-	std::cout<<"welcom phonebook"<<std::endl;
+	std::cout<<"------------------------------------"<<std::endl;
+	std::cout<<"-----------welcom phonebook---------"<<std::endl;
+	std::cout<<"----ADD--------SEARCH-------EXIT----"<<std::endl;
 }
 Phonebook::~Phonebook(void)
 {
-	std::cout << "bye"<<std::endl;
+	std::cout << "warnig : Phonebook destroyed "<<std::endl;
 }
 void	Phonebook::add(void)
 {
@@ -32,35 +34,47 @@ void	Phonebook::add(void)
 		std::cout << "waring: overwrite" << std::endl;
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<<"Entre name : ";
+		std::cout<<"enter name : ";
 		if(std::getline(std::cin , str) && str != "")
 			this->contacts[this->index % 8 ].set_name(str);
 	}
 	str= "";
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<< this->contacts[this->index % 8].get_name() <<" last name : ";
+		std::cout<<"last name : ";
 		if(std ::getline(std::cin , str ) && str != "")
 			this->contacts[this->index % 8].set_lastname(str);
 	}
 	str= "";
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<< this->contacts[this->index % 8].get_name() <<" speudo : ";
+		std::cout<<"speudo : ";
 		if(std ::getline(std::cin , str ) && str != "")
 			this->contacts[this->index % 8].set_speudo(str);
 	}
 	str= "";
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<< this->contacts[this->index % 8].get_name() << " phone : ";
+		std::cout<<"phone : ";
 		if(std ::getline(std::cin , str ) &&  str != "")
+			{
+				for(int i = 0; str[i] ; i++)
+					{
+						if(!(str[i]>= '0' && str[i] <= '9' ) && str[i] != ' ' && str[i] != '+')
+						{
+							std::cout<<"plese enter the decimal number or the space or '+'"<<std::endl;
+							str="";
+							break;
+						}
+					}
+			}
 			this->contacts[this->index % 8].set_phone(str);
-	}
+		}
+
 	str= "";
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<< this->contacts[this->index % 8].get_name() << " secret : ";
+		std::cout<<"secret : ";
 		if(std ::getline(std::cin , str ) && str != "")
 		{
 			this->contacts[this->index % 8].set_secret(str);
@@ -78,11 +92,11 @@ void	Phonebook::print(Contact contact)
 		std::cout << "fail get info";
 	}
 
-	std::cout<<"name:"<<contact.get_name()<<std::endl;
-	std::cout<<"last name:"<<contact.get_lastname()<<std::endl;
-	std::cout<<"nickname"<<contact.get_speudo()<<std::endl;
-	std::cout<<"num"<<contact.get_phone()<<std::endl;
-	std::cout<<"secret"<<contact.get_secret()<<std::endl;
+	std::cout<<"name      :"<<contact.get_name()<<std::endl;
+	std::cout<<"last name :"<<contact.get_lastname()<<std::endl;
+	std::cout<<"nickname  :"<<contact.get_speudo()<<std::endl;
+	std::cout<<"num       :"<<contact.get_phone()<<std::endl;
+	std::cout<<"secret    :"<<contact.get_secret()<<std::endl;
 }
 Contact Phonebook::get_contact(int index)
 {

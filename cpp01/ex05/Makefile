@@ -15,7 +15,7 @@ OBJ = $(SRC:.cpp=.o)
 CC = g++
 FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
-NAME = Harl
+NAME = harl
 
 all: $(NAME)
 

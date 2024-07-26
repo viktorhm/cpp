@@ -42,15 +42,22 @@ std::cout<<"This is unacceptable! I want to speak to the manager now."<<std::end
 void Harl::complain(std::string result)
 {
 	int i = 0;
-	std::string tab[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	void (Harl :: *fer[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	while(i > 4 && tab[i].compare(result) != 0)
+
+	void (Harl::*function[4])(void) = {
+		&Harl::debug, &Harl::info,
+		&Harl::warning, &Harl::error };
+
+	std::string result_tab[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+
+	while(i < 4)
 	{
+		if(result == result_tab[i])
+			{
+				(this->*function[i])();
+				return;
+			}
 		i++;
 	}
-	if(i > 3)
-		std::cout << " no normal probleme "<< std::endl;
-	else
-		(this->*fer[i])();
-
+	std::cout<<"sorry : "<<result << "no input variable is invalid" ;
 }

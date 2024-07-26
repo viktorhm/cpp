@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/24 15:45:25 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/07/24 16:04:30 by vharatyk         ###   ########.fr       */
+/*   Created: 2024/07/24 15:47:17 by vharatyk          #+#    #+#             */
+/*   Updated: 2024/07/24 16:53:26 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include<iostream>
 
-nt main (int argc, char **argv)
+#ifndef HARLE_HPP
+# define HARLE_HPP
+
+class Harl
 {
-	Harl harl;
-	for(int i = 1; i < argc; i++)
-	{
-		harl.complain(argv[i]);
-		std::cout << std::endl;
-	}
-	return(0);
-}
+private:
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
+public:
+	Harl(void);
+	~Harl(void);
+
+	void complain(std::string result);
+};
+
+#endif
+
