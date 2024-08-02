@@ -6,7 +6,7 @@
 #    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/23 06:28:07 by vharatyk          #+#    #+#              #
-#    Updated: 2024/07/23 06:28:10 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/08/01 14:44:26 by vharatyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ $(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 clean:
 	rm -f $(OBJ)
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re : fclean $(NAME)

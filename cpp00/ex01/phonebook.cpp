@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 11:18:32 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/07/26 14:11:59 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/08/01 15:54:25 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,13 +74,11 @@ void	Phonebook::add(void)
 	str= "";
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<<"secret : ";
+		std::cout<<"darkest secret : ";
 		if(std ::getline(std::cin , str ) && str != "")
-		{
-			this->contacts[this->index % 8].set_secret(str);
-			std::cout << "profil creted ";
-		}
+			this->contacts[this->index % 8].set_secret(str);	
 	}
+	std::cout << "profil creted" << std::endl;
 	this->index++;
 }
 
@@ -117,7 +115,7 @@ void	Phonebook::search(void)
 		std::cout << "select an index:";
 			if(std::getline(std::cin, str) && str != "")
 				{
-					if(str.size() == 1 && str[0] >= '1')
+					if(str.size() == 1 && (str[0] >= '1' && str[0] <= '8'))
 						break;
 				}
 				if(str != "")
