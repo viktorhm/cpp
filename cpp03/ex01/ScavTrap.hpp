@@ -11,12 +11,9 @@
 /* ************************************************************************** */
 
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#pragma once
 
 #include "ClapTrap.hpp"
-#include <iostream>
-#include <string>
 
 class ScavTrap : public ClapTrap
 {
@@ -29,12 +26,10 @@ class ScavTrap : public ClapTrap
 
 		ScavTrap &operator=(const ScavTrap &src);
 
-		void attack(const std::string& target);
+		void attack(const std::string &target);
 		void guardGate(void);
 
 	private:
 		bool _guarding_gate;
 
 };
-
-# endif

@@ -10,25 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ScavTrap.hpp"
 
+
+#include"ScavTrap.hpp"
 
 ScavTrap::ScavTrap(): ClapTrap()
 {
 	this->_hit_pts = 100;
 	this->_energy = 50;
 	this->_attack = 20;
+	this->_guarding_gate = false ;
 	std::cout <<"ScavTrap Default Contructor"<<std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &copy)
 {
-	std::cout << "ScavTrap copy Contructor"<<std::endl;
-	*this = copy;
+	this->_guarding_gate = copy._guarding_gate;
+	std::cout<<"ScavTrap Copy Construtor called" << std::endl ;
 }
 
-ScavTrap::ScavTrap(std::string name): _name(name), _hit_pts(10), _energy(10), _attack(0)
+ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
+	this->_hit_pts = 100;
+	this->_energy = 50;
+	this->_attack = 20;
+	this->_guarding_gate = false ;
 	std::cout <<"ScavTrap Default Contructor for the name " << _name <<std::endl;
 }
 
@@ -60,7 +66,13 @@ void ScavTrap::attack(const std::string& target)
 		std::cout<<"ScavTrap "<< this->_name << " no enough _hit_pts " << std::endl ;
 }
 
-void ScavTrap::guardGate(void);
+void  ScavTrap::guardGate(void)
 {
-	std::cout << "ScavTrap is now in Gate" <<std::endl;
+	if(this->_guarding_gate == false)
+	{
+		this->_guarding_gate = true;
+		std::cout << "ScavTrap" << this->_name << "is now guarding the gate"<<std::endl;
+	}
+	else 
+	std::cout <<"ScavTrap" <<this->_name << "is alredy guarind the gate." <<std::endl;
 }

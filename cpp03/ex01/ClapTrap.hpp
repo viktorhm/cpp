@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
-
+#pragma once // sinon pas possible de le recupere dans scavTrap
 #include <iostream>
 #include <string>
 
@@ -29,7 +27,7 @@ class ClapTrap
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 
-	private:
+	protected:
 		std::string _name;
 		int _hit_pts;
 		int _energy;
@@ -37,4 +35,4 @@ class ClapTrap
 
 };
 
-#endif
+
