@@ -6,27 +6,28 @@
 #    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/26 16:26:21 by vharatyk          #+#    #+#              #
-#    Updated: 2024/07/27 17:59:00 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/08/04 16:52:02 by vharatyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Fixed.cpp Fixed.hpp
-OBJ = $(SRC:.cpp=.o)
-CC = g++
-FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+SRCS = main.cpp Fixed.cpp Fixed.hpp
+OBJS	= $(SRCS:.cpp=.o)
+CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
+CXX		= g++
 
-NAME = a.out
+NAME	= phonebook
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CXX) $(FLAGS) $(OBJS) -o $(NAME)
+
 clean:
-	rm -f $(OBJ)
-fclean:
+	rm -f $(OBJS)
+
+fclean: clean
 	rm -f $(NAME)
 
-re : fclean $(NAME)
+re: fclean $(NAME)
 
-.PHONY: all clean fclean re
-
+.PHONY: all clean fclean r

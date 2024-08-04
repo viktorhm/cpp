@@ -6,27 +6,28 @@
 #    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/23 06:28:07 by vharatyk          #+#    #+#              #
-#    Updated: 2024/08/01 14:44:26 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/08/04 16:51:34 by vharatyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
-OBJ = $(SRC:.cpp=.o)
-CC = g++
-FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+OBJS	= $(SRCS:.cpp=.o)
+CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
+CXX		= g++
 
-NAME = Zombie
+NAME	= phonebook
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CXX) $(FLAGS) $(OBJS) -o $(NAME)
+
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJS)
+
 fclean: clean
 	rm -f $(NAME)
 
-re : fclean $(NAME)
+re: fclean $(NAME)
 
 .PHONY: all clean fclean re
-

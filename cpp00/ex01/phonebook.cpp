@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 11:18:32 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/08/01 15:54:25 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/08/04 16:31:36 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@ Phonebook::Phonebook(void)
 {
 	this->index = 0 ;
 	std::cout<<"------------------------------------"<<std::endl;
-	std::cout<<"-----------welcom phonebook---------"<<std::endl;
+	std::cout<<"-----------welcome phonebook---------"<<std::endl;
 	std::cout<<"----ADD--------SEARCH-------EXIT----"<<std::endl;
 }
 Phonebook::~Phonebook(void)
 {
-	std::cout << "warnig : Phonebook destroyed "<<std::endl;
+	std::cout << "Warning: Phonebook destroyed "<<std::endl;
 }
 void	Phonebook::add(void)
 {
 	std::string	str;
 	str = "";
 	if(this->index> 7)
-		std::cout << "waring: overwrite" << std::endl;
+		std::cout << "Warning: overwrite" << std::endl;
 	while(!std::cin.eof() && str == "")
 	{
 		std::cout<<"enter name : ";
@@ -48,7 +48,7 @@ void	Phonebook::add(void)
 	str= "";
 	while(!std::cin.eof() && str == "")
 	{
-		std::cout<<"speudo : ";
+		std::cout<<"pseudo : ";
 		if(std ::getline(std::cin , str ) && str != "")
 			this->contacts[this->index % 8].set_speudo(str);
 	}
@@ -62,7 +62,7 @@ void	Phonebook::add(void)
 					{
 						if(!(str[i]>= '0' && str[i] <= '9' ) && str[i] != ' ' && str[i] != '+')
 						{
-							std::cout<<"plese enter the decimal number or the space or '+'"<<std::endl;
+							std::cout<<"Please enter the decimal number, a space, or '+'"<<std::endl;
 							str="";
 							break;
 						}

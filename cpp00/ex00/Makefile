@@ -1,18 +1,26 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/08/04 16:27:07 by vharatyk          #+#    #+#              #
+#    Updated: 2024/08/04 16:33:33 by vharatyk         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
+SRC		= megaphone.cpp
+OBJ		= $(SRC:.cpp=.o)
+CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -pedantic
+CXX 	= g++
 
-
-
-SRC = megaphone.cpp
-OBJ = $(SRC:.cpp=.o)
-CC = g++
-FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-
-NAME = megaphone
+NAME 	= megaphone
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(FLAGS) $(OBJ) -o $(NAME)
 clean:
 	rm -f $(OBJ)
 fclean: clean

@@ -6,22 +6,21 @@
 #    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 09:41:37 by vharatyk          #+#    #+#              #
-#    Updated: 2024/08/01 14:34:11 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/08/04 16:40:39 by vharatyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = phonebook.cpp main.cpp contact.cpp
+SRCS	= phonebook.cpp main.cpp contact.cpp utils.cpp
+OBJS	= $(SRCS:.cpp=.o)
+CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
+CXX		= g++
 
-NAME		= phonebook
-SRCS		= phonebook.cpp main.cpp contact.cpp utils.cpp
-OBJS		= $(SRCS:.cpp=.o)
-CC		= g++
-CPPFLAGS		= -pthread -Wextra -Wall -Werror -std=c++98 -pedantic
+NAME	= phonebook
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(FLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)
