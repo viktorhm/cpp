@@ -6,7 +6,7 @@
 #    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/23 06:28:07 by vharatyk          #+#    #+#              #
-#    Updated: 2024/08/04 16:51:34 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/08/05 14:53:39 by vharatyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OBJS	= $(SRCS:.cpp=.o)
 CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
 CXX		= g++
 
-NAME	= phonebook
+NAME	= Zombie
 
 all: $(NAME)
 

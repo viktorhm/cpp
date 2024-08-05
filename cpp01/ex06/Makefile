@@ -6,7 +6,7 @@
 #    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 16:07:20 by vharatyk          #+#    #+#              #
-#    Updated: 2024/08/05 12:16:16 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/08/05 15:13:47 by vharatyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OBJS	= $(SRCS:.cpp=.o)
 CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
 CXX		= g++
 
-NAME	= Harl filter
+NAME	= Harl_filter
 
 all: $(NAME)
 
@@ -30,4 +30,4 @@ fclean: clean
 
 re: fclean $(NAME)
 
-.PHONY: all clean fclean r
+.PHONY: all clean fclean re

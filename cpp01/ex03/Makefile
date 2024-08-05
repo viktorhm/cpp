@@ -6,7 +6,7 @@
 #    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/23 07:23:40 by vharatyk          #+#    #+#              #
-#    Updated: 2024/08/05 12:14:25 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/08/05 15:13:44 by vharatyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,4 +30,4 @@ fclean: clean
 
 re: fclean $(NAME)
 
-.PHONY: all clean fclean r
+.PHONY: all clean fclean re
