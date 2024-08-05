@@ -6,7 +6,7 @@
 #    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/23 21:28:08 by vharatyk          #+#    #+#              #
-#    Updated: 2024/08/04 16:51:03 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/08/05 12:14:53 by vharatyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OBJS	= $(SRCS:.cpp=.o)
 CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
 CXX		= g++
 
-NAME	= phonebook
+NAME	= Sed_is_for_losers
 
 all: $(NAME)
 

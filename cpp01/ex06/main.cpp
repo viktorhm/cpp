@@ -6,13 +6,13 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 15:45:25 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/07/24 16:04:30 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:16:36 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-nt main (int argc, char **argv)
+int main (int argc, char **argv)
 {
 	Harl harl;
 	for(int i = 1; i < argc; i++)

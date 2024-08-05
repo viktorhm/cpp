@@ -6,7 +6,7 @@
 #    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/23 07:11:17 by vharatyk          #+#    #+#              #
-#    Updated: 2024/08/04 16:50:23 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/08/05 12:13:53 by vharatyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OBJS	= $(SRC:.cpp=.o)
 CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
 CXX		= g++
 
-NAME	= phonebook
+NAME	= HI_THIS_IS_BRAIN
 
 all: $(NAME)
 

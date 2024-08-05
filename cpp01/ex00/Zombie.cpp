@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 06:13:17 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/07/23 06:21:25 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:10:58 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  Zombie :: Zombie (std::string name)
 {
 	this->_name = name;
-	std::cout << "Zombie object" << this->_name << " create" << std::endl;
+	std::cout << "Zombie object" << this->_name << " create ())" << std::endl;
 }
  Zombie :: ~Zombie()
 {
@@ -24,5 +24,5 @@
 }
 void Zombie::announce()
 {
-	std::cout << this->_name << "BraiiiiiiinnnzzzZ..." <<std::endl;
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." <<std::endl;
 }
