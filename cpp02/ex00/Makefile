@@ -10,12 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp Fixed.cpp Fixed.hpp
+SRCS = main.cpp Fixed.cpp
 OBJS	= $(SRCS:.cpp=.o)
 CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
 CXX		= g++
 
-NAME	= phonebook
+NAME	= MonPremierCanon
 
 all: $(NAME)
 

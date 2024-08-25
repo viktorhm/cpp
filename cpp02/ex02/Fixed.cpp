@@ -69,6 +69,7 @@ void Fixed::setRawBits(int const raw)
 		this->_value_fixe = raw;
 	}
 
+
 int Fixed::toInt(void) const
 	{
 		return((int)(this->_value_fixe >> _value_fixe_static));

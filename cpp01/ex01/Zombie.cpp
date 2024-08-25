@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 06:13:17 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/08/05 14:57:04 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/08/25 14:14:54 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Zombie :: Zombie(void)
 
 Zombie :: ~Zombie()
 {
-	std::cout << "zombie object "<< this->_name << "destroyed " << std::endl;
+	std::cout << "zombie object "<< this->_name << " destroyed " << std::endl;
 }
 
 void	Zombie::announce()

@@ -15,7 +15,7 @@ OBJS	= $(SRCS:.cpp=.o)
 CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
 CXX		= g++
 
-NAME	= PremierPasVersUneClasseUtile
+NAME	= MaintenantOnPeutParler
 
 all: $(NAME)
 
