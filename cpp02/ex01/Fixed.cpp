@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 16:30:13 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/07/27 19:36:35 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/09/17 13:23:13 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,10 @@ Fixed &Fixed::operator=(const Fixed &input)
 	}
 
 std::ostream	&operator<<(std::ostream &out , Fixed const &Fixed)
-{
+	{
 	out << Fixed.toFloat();
 	return(out);
-}
+	}
 
 int  Fixed::getRawBits(void) const
 	{

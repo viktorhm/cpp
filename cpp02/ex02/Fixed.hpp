@@ -57,7 +57,6 @@ class Fixed
 	static Fixed	max( const Fixed &fixed1, const Fixed &fixed2);
 
 	private:
-
 		int	_value_fixe;
 		static const int _value_fixe_static;
 

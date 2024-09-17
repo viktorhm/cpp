@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 06:03:08 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/08/05 12:04:49 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/09/16 13:37:44 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int main (void)
 {
 	Zombie *z = newZombie("my");
 	z->announce();
-	randomChump("you");
+	randomChump("you"); // announce_is_created
 	delete z;
 }

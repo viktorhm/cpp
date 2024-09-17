@@ -6,7 +6,7 @@
 /*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 16:30:13 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/07/27 18:37:03 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/09/17 13:26:13 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,11 @@ Fixed &Fixed::operator=(const Fixed &src)
 		return(*this);
 	}
 
-
 int  Fixed::getRawBits(void) const
 	{
 		std::cout <<"getRawBits member function called" <<std::endl;
 		return(this->_value_fixe);
 	}
-
-
 
 void Fixed::setRawBits(int const raw)
 	{
