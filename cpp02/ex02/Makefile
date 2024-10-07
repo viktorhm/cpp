@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
+#    By: viktor <viktor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/26 16:26:21 by vharatyk          #+#    #+#              #
-#    Updated: 2024/08/04 16:52:17 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/10/07 11:19:23 by viktor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = main.cpp Fixed.cpp
 OBJS	= $(SRCS:.cpp=.o)
-CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
+CXXFLAGS= -Wextra -Wall -Werror -g -std=c++98 -pedantic
 CXX		= g++
 
 NAME	= MaintenantOnPeutParler
