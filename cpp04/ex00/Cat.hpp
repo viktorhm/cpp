@@ -1,12 +1,20 @@
 
 
+#pragma once
+
 #include"Animal.hpp"
 
-class Cat : Animal
+class Cat : public Animal
 {
 public:
-    cat();
-    ~cat();
+    Cat();
+    Cat(const cat &copy);
+
+    ~Cat();
+    
+    cat &operator=(Cat &src);
+    void makeSound();
+
 private:
 
 

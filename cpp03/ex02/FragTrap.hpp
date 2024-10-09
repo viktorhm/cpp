@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viktor <viktor@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 14:50:48 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/10/09 09:45:31 by viktor           ###   ########.fr       */
+/*   Updated: 2024/10/09 12:24:59 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap: public ClapTrap
 {
+	private:
+
 	public:
 		FragTrap();
 		FragTrap(const FragTrap &copy);
@@ -27,8 +29,5 @@ class FragTrap : public ClapTrap
 		FragTrap &operator=(const FragTrap &src);
 
 		void highFivesGuys(void);
-
-	private:
-		
 
 };

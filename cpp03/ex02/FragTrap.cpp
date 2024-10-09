@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viktor <viktor@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 14:51:00 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/10/09 09:47:02 by viktor           ###   ########.fr       */
+/*   Updated: 2024/10/09 12:13:20 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 FragTrap::FragTrap(): ClapTrap()
 {
 	this->_hit_pts = 100;
-	this->_energy = 50;
-	this->_attack = 20;
+	this->_energy = 100;
+	this->_attack = 30;
 	std::cout <<"FragTrap Default Contructor"<<std::endl;
 }
 

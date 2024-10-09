@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viktor <viktor@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 13:36:56 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/10/09 09:02:43 by viktor           ###   ########.fr       */
+/*   Updated: 2024/10/09 11:31:51 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
-
+#pragma once
 # include <iostream>
 
 class ClapTrap
@@ -35,5 +33,3 @@ class ClapTrap
 		unsigned int _attack;
 
 };
-
-# endif

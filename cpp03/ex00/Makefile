@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: viktor <viktor@student.42.fr>              +#+  +:+       +#+         #
+#    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/28 13:37:42 by vharatyk          #+#    #+#              #
-#    Updated: 2024/10/09 09:03:01 by viktor           ###   ########.fr        #
+#    Updated: 2024/10/09 12:01:10 by vharatyk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 SRCS = main.cpp ClapTrap.cpp 
 OBJS	= $(SRCS:.cpp=.o)
-CXXFLAGS= -Wextra -Wall -Werror -std=c++98 #-pedantic
+CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
 CXX		= g++
 
 NAME	= ClapTrap

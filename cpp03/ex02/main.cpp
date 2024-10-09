@@ -3,57 +3,54 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viktor <viktor@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 13:36:37 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/10/09 09:42:48 by viktor           ###   ########.fr       */
+/*   Updated: 2024/10/09 12:28:25 by vharatyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
+
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-
-int main()
+void	alice_rundown(void)
 {
-	std::cout << "### TESTING CLAPTRAP ###\n" << std::endl;
-	{
-		std::cout << "\033[34mConstructing\033[0m" << std::endl;
-		ClapTrap a;
-		ClapTrap b("Cody");
+	FragTrap alice("Alice");
 
-		std::cout << "\033[34mTesting\033[0m" << std::endl;
-		a.attack("some other robot");
-		a.takeDamage(10);
-		a.takeDamage(10);
-		a.beRepaired(5);
-		a.attack("some other other robot");
-		b.beRepaired(3);
-		for (int i = 0; i < 12; i++)
-			b.attack("Cody-clone");
-		b.beRepaired(3);
-		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
-	}
-	std::cout << "\n\n### TESTING FragTRAP ###\n" << std::endl;
-	{
-		std::cout << "\033[34mConstructing\033[0m" << std::endl;
-		FragTrap c;
-		FragTrap d("Savage");
+	alice.attack("Bob");
+	alice.attack("Chris");
+	alice.attack("Diana");
+	alice.attack("Elisa");
+	alice.attack("Fred");
+	alice.attack("Gemma");
+	alice.attack("Henry");
+	alice.attack("Isabella");
+	alice.attack("Jack");
+	alice.attack("Kevin");
+	alice.attack("Laura");
+	alice.attack("Mike");
+	alice.highFivesGuys();
+}
 
-		std::cout << "\033[34mTesting\033[0m" << std::endl;
-		c.attack("CloneTrap");
-		// for (int i = 0; i < 50; i++)
-		// 	c.attack("CloneTrap");
-		c.beRepaired(22);
-		c.takeDamage(21);
-		c.beRepaired(22);
-		c.guardGate();
-		c.guardGate();
-		d.attack("Savage-clone");
-		d.takeDamage(101);
-		d.takeDamage(15);
-		d.attack("FragTrap-clone");
-		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
+void	bob_rundown(void)
+{
+	FragTrap	bob("Bob");
+	for(int i = 0 ; i < 5 ; i++)
+	{
+		bob.takeDamage(20);
+	bob.beRepaired(10);
 	}
-	return (0);
+
+	bob.takeDamage(1);
+	bob.highFivesGuys();
+}
+
+int	main(void)
+{
+	std::cout << std::endl << std::endl << "Alice's" << std::endl << std::endl;
+	alice_rundown();
+	std::cout << std::endl << std::endl << "Bob's" << std::endl << std::endl;
+	bob_rundown();
 }

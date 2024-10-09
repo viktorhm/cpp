@@ -30,6 +30,6 @@ class ScavTrap : public ClapTrap
 		void guardGate(void);
 
 	private:
-		bool _guarding_gate;
+
 
 };
