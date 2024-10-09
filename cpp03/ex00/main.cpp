@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: viktor <viktor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 13:36:37 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/08/02 14:39:44 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/10/09 09:03:48 by viktor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main()
 		for (int i = 0; i < 12; i++)
 			b.attack("Cody-clone");
 		b.beRepaired(3);
-		std::cout << "Deconstructing" << std::endl;
+		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	}
 	return (0);
 }

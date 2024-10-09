@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: viktor <viktor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 13:36:37 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/08/02 14:39:44 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/10/09 09:42:48 by viktor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 
 int main()
@@ -34,11 +34,11 @@ int main()
 		b.beRepaired(3);
 		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	}
-	std::cout << "\n\n### TESTING SCAVTRAP ###\n" << std::endl;
+	std::cout << "\n\n### TESTING FragTRAP ###\n" << std::endl;
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
-		ScavTrap c;
-		ScavTrap d("Savage");
+		FragTrap c;
+		FragTrap d("Savage");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		c.attack("CloneTrap");
@@ -52,7 +52,7 @@ int main()
 		d.attack("Savage-clone");
 		d.takeDamage(101);
 		d.takeDamage(15);
-		d.attack("ScavTrap-clone");
+		d.attack("FragTrap-clone");
 		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	}
 	return (0);

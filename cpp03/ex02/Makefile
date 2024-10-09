@@ -3,20 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+         #
+#    By: viktor <viktor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/28 13:37:42 by vharatyk          #+#    #+#              #
-#    Updated: 2024/08/04 16:52:39 by vharatyk         ###   ########.fr        #
+#    Updated: 2024/10/09 09:42:48 by viktor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS = main.cpp ClapTrap.cpp  ScavTrap.cpp  
+SRCS = main.cpp ClapTrap.cpp  FragTrap.cpp  
 OBJS	= $(SRCS:.cpp=.o)
 CXXFLAGS= -Wextra -Wall -Werror -std=c++98 -pedantic
 CXX		= g++
 
-NAME	= phonebook
+NAME	= FragTrap
 
 all: $(NAME)
 

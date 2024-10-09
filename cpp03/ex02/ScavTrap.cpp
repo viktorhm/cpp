@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vharatyk <vharatyk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: viktor <viktor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 14:51:00 by vharatyk          #+#    #+#             */
-/*   Updated: 2024/08/02 16:04:58 by vharatyk         ###   ########.fr       */
+/*   Updated: 2024/10/09 09:47:37 by viktor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ScavTrap::ScavTrap(): ClapTrap()
 	std::cout <<"ScavTrap Default Contructor"<<std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &copy)
+ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy)
 {
 	this->_guarding_gate = copy._guarding_gate;
 	std::cout<<"ScavTrap Copy Construtor called" << std::endl ;
@@ -35,12 +35,12 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 	this->_energy = 50;
 	this->_attack = 20;
 	this->_guarding_gate = false ;
-	std::cout <<"ScavTrap Default Contructor for the name " << _name <<std::endl;
+	std::cout <<"ScavTrap Default Contructor for the name " << this->_name <<std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout <<"ScavTrap Deconstructor for " << _name << std::endl ;
+	std::cout <<"ScavTrap Deconstructor for " << this->_name << std::endl ;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &src)
@@ -49,7 +49,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &src)
 	this->_name = src._name;
 	this->_hit_pts = src._hit_pts;
 	this->_energy = src._energy;
-	this->_attack = _attack;
+	this->_attack = src._attack;
 	return (*this);
 }
 
@@ -61,9 +61,9 @@ void ScavTrap::attack(const std::string& target)
 			this->_energy--;
 		}
 	else if(this->_energy == 0)
-		std::cout<<"ScavTrap "<< this->_name << " no enough energy_pts " <<std::endl;
+		std::cout<<"ScavTrap "<< this->_name << " no enough energy_pts to attack the "<<target<<std::endl;
 	else 
-		std::cout<<"ScavTrap "<< this->_name << " no enough _hit_pts " << std::endl ;
+		std::cout<<"ScavTrap "<< this->_name << " no enough energy_pts to attack the " <<target<<std::endl ;
 }
 
 void  ScavTrap::guardGate(void)
